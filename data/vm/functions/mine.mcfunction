@@ -1,28 +1,7 @@
-execute at @e[type=item,tag=isCoal,distance=..10] if block ~ ~1 ~ #vm:coal run setblock ~ ~1 ~ air destroy
-execute at @e[type=item,tag=isCoal,distance=..10] if block ~ ~-1 ~ #vm:coal run setblock ~ ~-1 ~ air destroy
-execute at @e[type=item,tag=isCoal,distance=..10] if block ~1 ~ ~ #vm:coal run setblock ~1 ~ ~ air destroy
-execute at @e[type=item,tag=isCoal,distance=..10] if block ~-1 ~ ~ #vm:coal run setblock ~-1 ~ ~ air destroy
-execute at @e[type=item,tag=isCoal,distance=..10] if block ~ ~ ~1 #vm:coal run setblock ~ ~ ~1 air destroy
-execute at @e[type=item,tag=isCoal,distance=..10] if block ~ ~ ~-1 #vm:coal run setblock ~ ~ ~-1 air destroy
-execute at @e[type=item,tag=isCoal,distance=..10] if block ~1 ~ ~1 #vm:coal run setblock ~1 ~ ~1 air destroy
-execute at @e[type=item,tag=isCoal,distance=..10] if block ~1 ~ ~-1 #vm:coal run setblock ~1 ~ ~-1 air destroy
-execute at @e[type=item,tag=isCoal,distance=..10] if block ~-1 ~ ~1 #vm:coal run setblock ~-1 ~ ~1 air destroy
-execute at @e[type=item,tag=isCoal,distance=..10] if block ~-1 ~ ~-1 #vm:coal run setblock ~-1 ~ ~-1 air destroy
-
-execute at @e[type=item,tag=isCoal,distance=..10] if block ~1 ~1 ~ #vm:coal run setblock ~1 ~1 ~ air destroy
-execute at @e[type=item,tag=isCoal,distance=..10] if block ~-1 ~1 ~ #vm:coal run setblock ~-1 ~1 ~ air destroy
-execute at @e[type=item,tag=isCoal,distance=..10] if block ~ ~1 ~1 #vm:coal run setblock ~ ~1 ~1 air destroy
-execute at @e[type=item,tag=isCoal,distance=..10] if block ~ ~1 ~-1 #vm:coal run setblock ~ ~1 ~-1 air destroy
-execute at @e[type=item,tag=isCoal,distance=..10] if block ~1 ~1 ~1 #vm:coal run setblock ~1 ~1 ~1 air destroy
-execute at @e[type=item,tag=isCoal,distance=..10] if block ~1 ~1 ~-1 #vm:coal run setblock ~1 ~1 ~-1 air destroy
-execute at @e[type=item,tag=isCoal,distance=..10] if block ~-1 ~1 ~1 #vm:coal run setblock ~-1 ~1 ~1 air destroy
-execute at @e[type=item,tag=isCoal,distance=..10] if block ~-1 ~1 ~-1 #vm:coal run setblock ~-1 ~1 ~-1 air destroy
-
-execute at @e[type=item,tag=isCoal,distance=..10] if block ~1 ~-1 ~ #vm:coal run setblock ~1 ~-1 ~ air destroy
-execute at @e[type=item,tag=isCoal,distance=..10] if block ~-1 ~-1 ~ #vm:coal run setblock ~-1 ~-1 ~ air destroy
-execute at @e[type=item,tag=isCoal,distance=..10] if block ~ ~-1 ~1 #vm:coal run setblock ~ ~-1 ~1 air destroy
-execute at @e[type=item,tag=isCoal,distance=..10] if block ~ ~-1 ~-1 #vm:coal run setblock ~ ~-1 ~-1 air destroy
-execute at @e[type=item,tag=isCoal,distance=..10] if block ~1 ~-1 ~1 #vm:coal run setblock ~1 ~-1 ~1 air destroy
-execute at @e[type=item,tag=isCoal,distance=..10] if block ~1 ~-1 ~-1 #vm:coal run setblock ~1 ~-1 ~-1 air destroy
-execute at @e[type=item,tag=isCoal,distance=..10] if block ~-1 ~-1 ~1 #vm:coal run setblock ~-1 ~-1 ~1 air destroy
-execute at @e[type=item,tag=isCoal,distance=..10] if block ~-1 ~-1 ~-1 #vm:coal run setblock ~-1 ~-1 ~-1 air destroy
+execute as @s if score Coal vm_toggle matches 1 run function vm:mine/coal
+execute as @s if score Iron vm_toggle matches 1 run function vm:mine/iron
+execute as @s if score Gold vm_toggle matches 1 run function vm:mine/gold
+execute as @s if score Redstone vm_toggle matches 1 run function vm:mine/redstone
+execute as @s if score Lapis vm_toggle matches 1 run function vm:mine/lapis
+execute as @s if score Diamond vm_toggle matches 1 run function vm:mine/diamond
+execute as @s if score Emerald vm_toggle matches 1 run function vm:mine/emerald
